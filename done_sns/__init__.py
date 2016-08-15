@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
+#!/usr/bin/python
 import os
 import subprocess
 import sys
 
-import done_sns.sns
+import sns
 
 def done():
     # get the command
@@ -28,7 +29,3 @@ def done():
         output.append(line)
 
     sns.publish(arn, subject, '\n'.join(output))
-
-
-if __name__ == '__main__':
-    done()
